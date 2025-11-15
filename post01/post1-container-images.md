@@ -230,18 +230,18 @@ $ grype "localhost/go-scratch-app" --by-cve -o table | grep 'by severity'
    ├── by severity: 0 critical, 0 high, 0 medium, 0 low, 0 negligible
 ```
 
-🥳 We got scratch container with a app of `3.9 MB`! 🚀 Stay fast end secure. 
+🥳 We got scratch container with an app of `3.9 MB`! 🚀 Stay fast and secure. 
 `THE FUTURE BELONGS TO CONTAINERS!`
 
 
 ## Upcoming topics
 
-- **Image signing and provenance** — how to sign, verify, and track container images to ensure supply-chain integrity and trusted deployments.
-- **Containers vs. virtual machines** — when containers can act like VMs, trade-offs, and patterns for running container workloads with VM-like isolation or stateful behavior.
+- `Image signing and provenance` — how to sign, verify, and track container images to ensure supply-chain integrity and trusted deployments.
+- `Containers vs. virtual machines` — when containers can act like VMs, trade-offs, and patterns for running container workloads with VM-like isolation or stateful behavior.
 - Can a **virtual machine** be packaged and deployed `like a container`?
 - Does Kubernetes make it easier to move applications between cloud environments?
 - Pros and cones of a affortable bublic cloud ( compare hyperscaler aaginst smaller cloud providers)
-- Compare and contrast the advantages and disadvantages of ""large hyperscale cloud platforms** versus **cost-effective, smaller cloud vendors**.
+- Compare and contrast the advantages and disadvantages of `large hyperscale cloud platforms` versus `cost-effective, smaller cloud vendors`.
 
 
 
