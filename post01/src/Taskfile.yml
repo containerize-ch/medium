@@ -1,0 +1,50 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  BINARY: main
+  SRC: main.go
+
+tasks:
+  default:
+    desc: Build (default)
+    deps: [build-static]
+
+  build-static:
+    desc: Build static binary
+    env:
+      CGO_ENABLED: "0"
+      GOOS: linux
+      GOARCH: amd64
+    cmds:
+      - echo "Building static binary {{.BINARY}}-static ..."
+      - go build -a -ldflags '-extldflags "-static"' -o bin/{{.BINARY}}-static {{.SRC}}
+      - du -hs bin/{{.BINARY}}-static
+      - ldd bin/{{.BINARY}}-static || echo "Not a dynamic executable"
+
+  compress:
+    desc: Compress binary with upx
+    deps: [build-static]
+    cmds:
+      - echo "Compressing {{.BINARY}}-static..."
+      - upx --best --lzma bin/{{.BINARY}}-static
+      - echo "After compression:"
+      - du -hs bin/{{.BINARY}}-static
+
+  run:
+    desc: Run binary
+    cmds:
+      - ./bin/{{.BINARY}}-static
+
+  clean:
+    desc: Clean artifacts
+    cmds:
+      - rm -f bin/{{.BINARY}}-static
+
+  buildah:
+    desc: Build container image with buildah
+    deps: [build-static, compress]
+    cmds:
+      - echo "Building container image..."
+      - buildah bud -t go-scratch-app:latest .
