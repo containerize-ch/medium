@@ -160,7 +160,7 @@ tasks:
 ```
 
 ## Docker file - empty Dockerfile no base image
-```
+```Dockerfile
 FROM scratch
 LABEL maintainer="BigG01 <olig@containerize.ch>"
 WORKDIR /bin
@@ -170,7 +170,7 @@ ENTRYPOINT ["/go/bin/main-static"]
 ```
 
 ## Result
-```
+```bash
 ask clean buildah
 task: [clean] rm -f bin/main-static
 task: [build-static] echo "Building static binary main-static ..."
@@ -216,7 +216,7 @@ Writing manifest to image destination
 Successfully tagged localhost/go-scratch-app:latest
 7b05891cfe17b45d0bb70789c4d9f559a2f067d6f88bb6c56b3ba4c61f59b02b
 ```
-```
+```bash
 $ podman images | grep -i go-scratch
 localhost/go-scratch-app                           latest      7b05891cfe17  31 seconds ago  3.91 MB
 
