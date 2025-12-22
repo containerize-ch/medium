@@ -1,0 +1,134 @@
+<mxfile host="65bd71144e">
+    <diagram name="Cloud Agnostic K8s Architecture" id="CloudAgnosticArch">
+        <mxGraphModel dx="1197" dy="959" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="CLOUD-AGNOSTIC KUBERNETES PLATFORM ARCHITECTURE&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="20" width="600" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="k8s_cluster" value="KUBERNETES CLUSTER&#xa;(CLOUD AGNOSTIC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;spacingTop=10;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="320" y="280" width="520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="oss_data" value="OSS DATA LAYER&#xa;(PostgreSQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="k8s_cluster" vertex="1">
+                    <mxGeometry x="20" y="60" width="110" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="app_workloads" value="APPLICATION&#xa;WORKLOADS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="k8s_cluster" vertex="1">
+                    <mxGeometry x="140" y="60" width="110" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="workload_steering" value="WORKLOAD&#xa;STEERING" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="k8s_cluster" vertex="1">
+                    <mxGeometry x="260" y="60" width="110" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="cluster_ext" value="CLUSTER EXTENSION&#xa;(Operators / Crossplane)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="k8s_cluster" vertex="1">
+                    <mxGeometry x="380" y="60" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="iam" value="UNIFIED IAM SOLUTION&#xa;(Entra ID / Okta)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="480" y="100" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="iac" value="INFRASTRUCTURE AS CODE (IaC)&#xa;(Terraform / Ansible)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="480" y="190" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="helm" value="HELM CHARTS&#xa;(AGNOSTIC)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="190" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="gitops" value="GITOPS&#xa;(GitLab Public &amp; Secured)&#xa;--&#xa;RUNNERS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="80" y="320" width="180" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="managed_services" value="STANDARD MANAGED SERVICES" style="swimlane;horizontal=1;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="280" width="200" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="kv" value="KEY VAULT" style="rounded=0;whiteSpace=wrap;html=1;" parent="managed_services" vertex="1">
+                    <mxGeometry x="10" y="30" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="dbaas" value="DATABASE AS A SERVICE" style="rounded=0;whiteSpace=wrap;html=1;" parent="managed_services" vertex="1">
+                    <mxGeometry x="10" y="70" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="waf" value="WAF" style="rounded=0;whiteSpace=wrap;html=1;" parent="managed_services" vertex="1">
+                    <mxGeometry x="10" y="110" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="lb" value="LOAD BALANCER" style="rounded=0;whiteSpace=wrap;html=1;" parent="managed_services" vertex="1">
+                    <mxGeometry x="10" y="150" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="observability" value="UNIFIED MONITORING &amp;amp;&lt;br&gt;OBSERVABILITY STACK&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="320" y="520" width="280" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="backup" value="BACKUPS&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="640" y="520" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="obj_storage" value="OBJECT&#xa;STORAGE" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="520" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="clouds_group" value="" style="group" parent="1" vertex="1">
+                    <mxGeometry x="240" y="640" width="680" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="aws" value="AWS" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" parent="clouds_group" vertex="1">
+                    <mxGeometry x="20" y="10" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="azure" value="AZURE" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="clouds_group" vertex="1">
+                    <mxGeometry x="160" y="10" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="gcp" value="GCP" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="clouds_group" vertex="1">
+                    <mxGeometry x="300" y="10" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="onprem" value="ON-PREMISE" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="clouds_group" vertex="1">
+                    <mxGeometry x="440" y="10" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="eucloud" value="SMALL&#xa;EU CLOUD" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="clouds_group" vertex="1">
+                    <mxGeometry x="580" y="10" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" value="SECURE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="iam" target="gitops" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="170" y="130"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" value="ENCRYPTION AT REST&#xa;&amp; IN TRANSIT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="iam" target="iac" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" value="ENCRYPTION AT REST&#xa;&amp; IN TRANSIT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="iac" target="k8s_cluster" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="helm" target="k8s_cluster" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="750" y="260"/>
+                            <mxPoint x="710" y="260"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e5" value="ENCRYPTION AT&#xa;REST &amp; IN TRANSIT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="gitops" target="k8s_cluster" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e6" value="ENCRYPTION AT&#xa;REST &amp; IN TRANSIT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="k8s_cluster" target="managed_services" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e7" value="ENCRYPTION AT REST&#xa;&amp; IN TRANSIT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="k8s_cluster" target="observability" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="k8s_cluster" target="backup" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="backup" target="obj_storage" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" parent="1" source="clouds_group" target="observability" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="580" y="640" as="sourcePoint"/>
+                        <mxPoint x="580" y="600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;entryX=0.54;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="clouds_group" target="k8s_cluster" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="580" y="640" as="sourcePoint"/>
+                        <mxPoint x="600" y="470" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="580" y="620"/>
+                            <mxPoint x="601" y="620"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
