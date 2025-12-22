@@ -10,13 +10,13 @@ This article explores observability's evolution from reactive monitoring (1.0) t
 
 ### Comparison Table: Observability  and key diffrences
 
-**Observability 1.0** was the era of traditional monitoring where teams relied on predefined dashboards and threshold-based alerts. You could only see what you thought to measure in advance, making it difficult to diagnose unexpected issues in production.
+| Version | Era | Key Characteristics | Capabilities | Limitations/Strengths |
+|---------|-----|---------------------|--------------|----------------------|
+| **Observability 1.0** | Traditional Monitoring | Predefined dashboards and threshold-based alerts | Only see what you thought to measure in advance | Difficult to diagnose unexpected issues in production |
+| **Observability 2.0** | Three Pillars Approach | Metrics, logs, and traces together | Better correlation between different data types, trace requests across distributed microservices | Enabled better diagnosis across microservices architectures |
+| **Observability 3.0** | Modern Intelligent Approach | AI/ML-assisted with automatic analysis | Anomaly detection, automatic root cause analysis, high-cardinality data queries without performance penalties | Designed for cloud-native, ephemeral infrastructure complexity where traditional approaches fail |
 
-**Observability 2.0** introduced the "three pillars" approach, bringing metrics, logs, and traces together. This enabled better correlation between different data types and made it possible to trace requests across distributed microservices architectures.
-
-**Observability 3.0** represents the modern, intelligent approach where AI/ML assists in anomaly detection, root cause analysis happens automatically, and high-cardinality data can be queried without performance penalties. It's designed for the complexity of cloud-native, ephemeral infrastructure where traditional approaches fail.
-
-## Lets opserver AIOps Adaptation Levels
+## Let's observe AIOps Adaptation Levels
 
 | Level | Name | Key Capabilities | Impact |
 |-------|------|------------------|--------|
