@@ -1,10 +1,13 @@
 # Wir brauchen immer noch mehr Informatiker – KI stoppt das nicht. 🤖
 
+![lernen](lernen.png)
+
 *Eine persönliche Einschätzung von jemandem, der seit Jahren in der IT-Welt arbeitet – und dessen Söhne genau dorthin wollen.*
 
 Ich habe mich ein wenig mit dem Thema befasst: Braucht es Leute wie mich noch in der Zukunft? Meine Söhne streben eine Karriere in der IT-Welt an – also musste ich mir diese Frage ernsthaft stellen.
 
 **Meine Antwort: JA – aber nicht mehr gleich wie vor 20 Jahren aber as ist ok.** 💡
+Wir bauen, Netzwerke, Infrastruktur, KI Infrastructure oder machen erst neue Technologien mit "reasearch" und inovation.
 
 ---
 
