@@ -16,7 +16,7 @@ KI ist ein Tool und kann uns einen enormen Effizienz-Boost geben. Die Frage ist 
 
 ---
 
-## Was lernt man heute noch in der Informatik? 🎓
+## Was lernt man heute in der Informatik? 🎓
 
 Lernt man in der Informatik immer noch das Gleiche? Und wird gerade dieser Bereich verändert?
 
